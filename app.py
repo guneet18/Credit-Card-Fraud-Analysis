@@ -43,7 +43,7 @@ def connect_to_db():
             port=config.db_port,
             database="credit_card_fraud",
             user=config.db_user,
-            password=config.db_passwordassword=config.db_password
+            password=config.db_password
         )
         return conn
     except OperationalError as e:
