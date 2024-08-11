@@ -40,9 +40,10 @@ def connect_to_db():
     try:
         conn = psycopg2.connect(
             host="localhost",
+            port=config.db_port,
             database="credit_card_fraud",
-            user="postgres",
-            password=config.db_password
+            user=config.db_user,
+            password=config.db_passwordassword=config.db_password
         )
         return conn
     except OperationalError as e:
